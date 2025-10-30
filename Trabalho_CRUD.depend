@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1761685612 source:c:\users\fezer\onedrive\documentos\projetos em c\trabalho_crud\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"functions.h"
+
+1761685093 source:c:\users\fezer\onedrive\documentos\projetos em c\trabalho_crud\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"functions.h"
+
+1761685625 c:\users\fezer\onedrive\documentos\projetos em c\trabalho_crud\functions.h
+
