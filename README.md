@@ -24,7 +24,7 @@ Existem duas maneiras principais de compilar este projeto:
 
 1.  Clone este repositório:
     ```bash
-    git clone [https://github.com/FelipeZerbinati/Mercadinho-Sao-Francisco.git](https://github.com/FelipeZerbinati/Mercadinho-Sao-Francisco.git)
+    git clone https://github.com/FelipeZerbinati/Mercadinho-Sao-Francisco.git
     ```
 2.  Navegue até a pasta do projeto:
     ```bash
@@ -38,7 +38,7 @@ Existem duas maneiras principais de compilar este projeto:
 1.  Certifique-se de ter o compilador GCC instalado.
 2.  Clone o repositório e navegue até a pasta:
     ```bash
-    git clone [https://github.com/FelipeZerbinati/Mercadinho-Sao-Francisco.git](https://github.com/FelipeZerbinati/Mercadinho-Sao-Francisco.git)
+    git clone https://github.com/FelipeZerbinati/Mercadinho-Sao-Francisco.git
     cd Mercadinho-Sao-Francisco
     ```
 3.  Compile os arquivos `.c` juntos:
