@@ -178,3 +178,34 @@ void remover_produto(Produto lista_produtos[], int *total_produtos){
 
     printf("\nProduto removido com sucesso!\n\n");
 }
+
+void salvar_produtos(Produto lista_produtos[], int total_produtos) {
+    FILE *file = fopen(ARQUIVO_ESTOQUE, "wb");
+
+    if (file == NULL) {
+        printf("ERRO CRÍTICO: Não foi possível abrir o arquivo para salvar!\n");
+        printf("Seus dados NÃO foram salvos.\n");
+        return;
+    }
+    fwrite(&total_produtos, sizeof(int), 1, file);
+    fwrite(lista_produtos, sizeof(Produto), total_produtos, file);
+    fclose(file);
+}
+
+void carregar_produtos(Produto lista_produtos[], int *total_produtos) {
+    FILE *file = fopen(ARQUIVO_ESTOQUE, "rb");
+
+    if (file == NULL) {
+        *total_produtos = 0;
+        return;
+    }
+
+    if (fread(total_produtos, sizeof(int), 1, file) != 1) {
+        *total_produtos = 0;
+        fclose(file);
+        return;
+    }
+
+    fread(lista_produtos, sizeof(Produto), *total_produtos, file);
+    fclose(file);
+}

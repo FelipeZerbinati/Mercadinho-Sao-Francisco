@@ -2,6 +2,7 @@
 #define FUNCTIONS_H
 
 #define MAX_PRODUTOS 100
+#define ARQUIVO_ESTOQUE "estoque.bin"
 
 typedef struct{
     int id;
@@ -25,4 +26,7 @@ void adicionar_produto(Produto lista_produtos[], int *total_produtos);
 void mostrar_produto(Produto lista_produtos[], int total_produtos);
 void atualizar_produto(Produto lista_produtos[], int total_produtos);
 void remover_produto(Produto lista_produtos[], int *total_produtos);
+
+void salvar_produtos(Produto lista_produtos[], int total_produtos);
+void carregar_produtos(Produto lista_produtos[], int *total_produtos);
 #endif // FUNCTIONS_H

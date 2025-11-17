@@ -3,12 +3,15 @@
 #include <locale.h>
 #include "functions.h"
 
-Produto lista_produtos[MAX_PRODUTOS];
-int total_produtos = 0;
 
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
+
+    Produto lista_produtos[MAX_PRODUTOS];
+    int total_produtos = 0;
+
+    carregar_produtos(lista_produtos, &total_produtos);
     limpar_tela();
     int opcao = 0;
 
@@ -21,6 +24,7 @@ int main()
         printf("| 2. REMOVER PRODUTOS\n");
         printf("| 3. MOSTRAR PRODUTOS\n");
         printf("| 4. ATUALIZAR PRODUTOS\n");
+        printf("| 5. SAIR E SALVAR\n");
 
         printf("Escolha uma opção: ");
         scanf("%d",&opcao);
@@ -47,6 +51,9 @@ int main()
                 break;
 
             case 5:
+                salvar_produtos(lista_produtos, total_produtos);
+
+                printf("Dados salvos com sucesso!\n");
                 printf("Saindo...\n\n");
                 return 0;
 
