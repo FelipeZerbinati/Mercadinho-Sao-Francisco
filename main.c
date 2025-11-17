@@ -62,6 +62,8 @@ int main()
                 printf("\nERROR!! OPÇÃO INVÁLIDA!\n");
                 printf("TENTE NOVAMENTE!\n");
                 visualizar_tela();
+                Sleep(2000);
+
                 break;
         }
 
